@@ -1,0 +1,118 @@
+/* @author Robert Roach */
+
+.modal-backdrop {
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    height: 100vh;
+    left: 0;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 200;
+
+    .modal-body {
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        min-height: 30vh;
+        padding: 2em 2em;
+        min-width: 40vw;
+    }
+}
+
+
+.create-spreadsheet-popup-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5em;
+
+    h2 {
+        font-family: arial;
+        margin-bottom: 1em;
+    }
+
+    .field-and-input {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        width: 100%;
+
+        input {
+            height: 25px;
+            font-size: 14px;
+            padding: 0 5px;
+        }
+    }
+
+    .row-input {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        position: relative;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: right;
+        gap: 5px;
+        margin-top: 40px;
+        width: 100%;
+
+        button {
+            padding: 5px 5px;
+        }
+        button:hover {
+            background-color: white;
+        }
+    }
+
+    .error {
+        color: red;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        white-space: nowrap;
+    }
+}
+
+.update-requests-body {
+    height: 70vh;
+    padding: 0.5em 1em 1em 1em;
+    width: 70vw;
+
+    h2 {
+        margin-bottom: 15px;
+    }
+
+    .update-requests-list {
+        display: flex;
+        height: 95%;
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .update-request {
+        border: 0.5px solid rgba(0,0,0,0.5);
+        display: flex;
+        gap: 5px;
+        padding: 5px 5px;
+    }
+
+    .updates-list {
+        border-left: 0.5px solid rgba(0,0,0,0.5);
+        display: flex;
+        flex-direction: column;
+        padding: 3px 10px 3px 3px;
+    }
+
+    .approve-button {
+        height: 25px;
+        padding: 3px 4px;
+    }
+
+}

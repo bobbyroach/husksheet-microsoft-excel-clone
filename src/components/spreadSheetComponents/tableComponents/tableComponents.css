@@ -1,0 +1,102 @@
+/* @author Robert Roach */
+
+.spreadsheet-table {
+    height: 84vh;
+    overflow: scroll;
+    position: relative;
+}
+
+.large-spreadsheet-table {
+    height: 85vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    min-width: max-content;
+}
+
+.column-row {
+    position: sticky;
+    top: 0;
+    z-index: 51;
+}
+
+.cell {
+    border: 0.1px solid rgba(0,0,0,0.3);
+    height: 22px;
+    padding: 3px 1px 1px 1px;
+}
+
+.cell-div {
+    align-items: center;
+    display: flex;
+    font-size: 13px;
+    font-family: arial;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+
+.cell-div:focus {
+    outline: 2px solid rgb(26, 26, 229);
+    z-index: 40;
+}
+
+.cell:focus {
+    outline: 2px solid rgb(26, 26, 229);
+    z-index: 40;
+}
+
+.column-cell-text {
+    padding-top: 3px;
+    text-align: center;
+    width: 100%;
+}
+
+.header-cell {
+    background-color: rgba(215, 215, 215);
+    display: flex;
+    position: relative;
+    border: 0.5px solid rgba(0,0,0,0.3);
+    border-top: none;
+    z-index: 250;
+}
+
+.index-cell {
+    background-color: rgba(215, 215, 215);
+    border: none;
+    border: 0.5px solid rgba(0,0,0,0.3);
+    position: sticky;
+    left: 0px;
+    padding: 3px 0 0 0;
+    text-align: center;
+    min-width: 25px;
+    width: 25px;
+    z-index: 50;
+}
+
+.corner-cell {
+    background-color: rgba(215, 215, 215);
+    border: 0.1px solid rgba(0,0,0,0.3);
+    border-left: none;
+    border-top: none;
+    min-width: 25px;
+    width: 25px;
+    position: sticky;
+    left: 0;
+    z-index: 1000;
+}
+
+.resizer {
+    min-width: 4px;
+    max-width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: col-resize;
+    user-select: none;
+}
+

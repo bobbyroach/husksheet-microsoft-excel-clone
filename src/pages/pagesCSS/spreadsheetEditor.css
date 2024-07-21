@@ -1,0 +1,12 @@
+/* @author Robert Roach */
+
+.spreadsheet-editor-page {
+    font-size: 13px;
+}
+
+.error {
+    background-color: rgba(215, 215, 215);
+    color: red;
+    padding: 0 6px 5px 6px;
+    width: 100%;
+}

@@ -1,0 +1,89 @@
+/* @author Robert Roach */
+
+.top-row {
+    align-items: center;
+    background-color: rgba(215, 215, 215);
+    border-bottom: 0.5px solid rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+
+    .top-left-row {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+    }
+    
+    .buttons {
+        color: black;
+        background-color: white;
+        border: 0.5px solid rgba(0,0,0,0.3);
+        border-radius: 2px;
+        height: 30px;
+        font-size: 13px;
+        font-family:Arial, Helvetica, sans-serif;
+        padding: 5px 15px;
+    }
+    .buttons:hover {
+        background-color: rgb(200, 240, 255);
+        cursor: pointer;
+    }
+    
+    .home-button {
+        padding-top: 7px;
+        text-decoration: none;
+    }
+    
+    .save-button {
+        align-items: center;
+        display: flex;
+        padding-top: 6px;
+        margin-right: 5px;
+    }
+
+    .top-right-row {
+        align-items: center;
+        display: flex;
+        gap: 7px;
+
+        p {
+            font-size: 15px;
+            white-space: nowrap;
+        }
+
+        .logout-button {
+            height: 30px;
+            padding: 8px 15px;
+            padding-top: 7px;
+            text-decoration: none;
+        }
+    }
+
+    @media (width < 700px) {
+        h1 {
+            font-size: 23px;
+        }
+
+        .top-left-row {
+            gap: 3px;
+        }
+
+        .buttons {
+            padding: 5px 10px;
+        }
+        .home-button {
+            display: flex;
+            align-items: center;
+        }
+        .save-button {
+            margin-right: 3px;
+        }
+
+        .top-right-row {
+            p {
+                display: none;
+            }
+        }
+    }
+}
+

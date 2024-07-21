@@ -1,0 +1,166 @@
+/* @author Robert Roach */
+
+.function-row {
+    align-items: center;
+    background-color: rgba(215, 215, 215);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 1em 2em;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.function-row-boxes {
+    height: 30px;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+
+.selected-cell {
+    align-items: center;
+    background-color: white;
+    border: 0.5px solid rgba(0,0,0,0.5);
+    display: flex;
+    font-size: 15px;
+    padding-left: 10px;
+    white-space: nowrap;
+    width: 20%;
+}
+
+.functions-dropdown {
+    position: relative;
+    width: 20%;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.up {
+    margin-top: 4px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    margin-bottom: 2px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.dropdown-toggle {
+    align-items: center;
+    background-color: white;
+    border: 0.5px solid rgba(0,0,0,0.5);
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+    width: 100%;
+}
+
+.dropdown-menu {
+    display: flex;
+    border:  0.5px solid rgba(0,0,0,0.6);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+    border-radius: 3px;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0px;
+    margin-top: 0.5px;
+    z-index: 100;
+}
+
+.dropdown-item {
+    background-color: white;
+    border: 0.5px solid rgba(0,0,0,0.3);
+    border-top: none;
+    cursor: pointer;
+    height: 25px;
+    text-align: left;
+    padding: 0 8px;
+    width: 100%;
+}
+.dropdown-item:hover {
+    background-color: rgb(231, 230, 230);
+}
+
+.function-input-wrapper {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+}
+
+.function-input {
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.activeError {
+    border: 0.5px solid red;
+}
+
+.error-tooltip {
+    color: red;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    p {
+        font-size: 22px;
+    }
+
+    .error-message {
+        position: absolute;
+        top: -30px; /* Adjust as needed */
+        left: -10px;
+        background-color: red;
+        color: white;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:hover .error-message {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media (width < 768px) {
+    .dropdown-toggle {
+        gap: 10%;
+        width: 100px;
+    }
+
+    .selected-cell {
+        padding-left: 5px;
+        width: 150px;
+    }
+}
+
+@media (width < 580px) {
+    .function-row {
+        flex-wrap: wrap;
+    }
+
+    .selected-cell {
+        width: 100px;
+    }
+
+    .functions-dropdown {
+        width: 150px;
+    }
+}
