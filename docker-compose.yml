@@ -1,0 +1,38 @@
+# Ownership: Aneesh Ponduru and Arnav Sawant
+
+# docker-compose.yml
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./src/frontend2
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - backend-network 
+
+  backend:
+    build:
+      context: ./src/api
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - backend-network
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - backend-network
+
+networks:
+  backend-network:
+    driver: bridge
