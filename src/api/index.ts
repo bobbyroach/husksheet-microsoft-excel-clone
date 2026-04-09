@@ -16,7 +16,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 const port = process.env.PORT || 3000;
 
-const mongoURI = "mongodb+srv://user_2:momdad123@cluster38697.ktybq5k.mongodb.net/husksheets";
+const mongoURI = process.env.MONGO_URI || "";
 
 mongoose.connect(mongoURI)
     .then(() => { console.log("Connected to MongoDB") })
